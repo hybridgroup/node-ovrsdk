@@ -114,7 +114,7 @@ var ovrHmdDesc = Struct({
     Manufacturer: ref.types.CString,
     VendorId: ref.types.short,
     ProductId: ref.types.short,
-    SerialNumber: ref.types.CString, // TODO char[24]
+    SerialNumber: ArrayType(ref.types.char, 24),
     FirmwareMajor: ref.types.short,
     FirmwareMinor: ref.types.short,
     CameraFrustumHFovInRadians: ref.types.float,
