@@ -1,5 +1,5 @@
 
-### Node FFI wrapper for the 0.3.2 Oculus VR SDK C API  
+### Node FFI wrapper for the 0.4.1 Oculus VR SDK C API  
 
 This wrapper includes a compiled Windows DLL and Linux .so (OSX will be added when I get a dev machine), so no need to compile it (unless you want to, that's fine too).
 
