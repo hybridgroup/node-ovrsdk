@@ -185,10 +185,9 @@ var libovr = ffi.Library(path.resolve(__dirname, 'libovr'), {
     ovr_Shutdown: [ref.types.void, []],
     ovrHmd_Create: [ovrHmd, [ref.types.int]],
     ovrHmd_Destroy: [ref.types.void, [ovrHmd]],
-    
-
     ovr_GetTimeInSeconds: [ref.types.double, []],
-
+    ovrHmd_ConfigureTracking: [ovrBool, [ovrHmd, ref.types.uint32, ref.types.uint32]],
+    ovrHmd_GetTrackingState: [ovrTrackingState, [ovrHmd, ref.types.double]],
 
     //ovrHmd_GetDesc: [ref.types.void, [ovrHmd, ovrHmdDescPtr]],
     // ovrHmd_StartSensor: [ovrBool, [ovrHmd, ref.types.uint32, ref.types.uint32]],
@@ -202,8 +201,11 @@ exports.ovr_Shutdown = libovr.ovr_Shutdown;
 exports.ovrHmd_Create = libovr.ovrHmd_Create;
 exports.ovrHmd_Destroy = libovr.ovrHmd_Destroy;
 exports.ovr_GetTimeInSeconds = libovr.ovr_GetTimeInSeconds;
+exports.ovrHmd_ConfigureTracking = libovr.ovrHmd_ConfigureTracking;
+exports.ovrHmd_GetTrackingState = libovr.ovrHmd_GetTrackingState;
+
 // exports.ovrHmd_GetDesc = libovr.ovrHmd_GetDesc;
 // exports.ovrHmd_StartSensor = libovr.ovrHmd_StartSensor;
-// exports.ovrHmd_GetSensorState = libovr.ovrHmd_GetSensorState;
+
 // exports.ovrHmd_ResetSensor = libovr.ovrHmd_ResetSensor;
 // exports.ovrHmd_GetRenderDesc = libovr.ovrHmd_GetRenderDesc;
